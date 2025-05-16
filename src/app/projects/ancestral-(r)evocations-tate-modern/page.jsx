@@ -13,16 +13,7 @@ import { useRef, useState } from 'react';
 export default function AncestralRevocations() {
 
 
-  
-      const videoRef = useRef(null);
-      const [isMuted, setIsMuted] = useState(true);
-    
-      const toggleMute = () => {
-        if (videoRef.current) {
-          videoRef.current.muted = !videoRef.current.muted;
-          setIsMuted(videoRef.current.muted);
-        }
-      }
+
 
   
 
@@ -48,7 +39,7 @@ export default function AncestralRevocations() {
           width={2557}
           height={1595}
           className={styles.image}
-          priority // optional: preload for performance
+          priority 
         />
       </div>
 
@@ -86,22 +77,22 @@ export default function AncestralRevocations() {
       </div>
 
 
-
-      <div className={styles.videoWrapper}  onClick={toggleMute}>
-      <video
-        ref={videoRef}
-        className={styles.video}
-        src="/videos/ancestralvideo.mp4" // or wherever your video is
-        autoPlay
-        loop
-        muted={isMuted}
-        playsInline
-        //controls // optional if you want user controls
-        />
-        <div className={styles.muteIndicator}>
-        {isMuted ? "Muted (Click to unmute)" : "Playing audio (Click to mute)"}
+        <div className={styles.videoWrapper}>
+          <iframe
+            className={styles.video}
+            src="https://player.vimeo.com/video/1082600535?h=e511342e6b" 
+            width="100%"
+            height="100%"
+            frameBorder="0"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowFullScreen
+            title="Vimeo video"
+          ></iframe>
         </div>
-      </div  >
+
+
+
+
         
         </div>  
 

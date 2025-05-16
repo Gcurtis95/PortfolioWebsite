@@ -13,15 +13,6 @@ import Footer from '../../components/Footer';
 export default function TheCrypt() {
 
 
-    const videoRef = useRef(null);
-    const [isMuted, setIsMuted] = useState(true);
-  
-    const toggleMute = () => {
-      if (videoRef.current) {
-        videoRef.current.muted = !videoRef.current.muted;
-        setIsMuted(videoRef.current.muted);
-      }
-    }
 
 
     const description = useRef(null);
@@ -43,21 +34,7 @@ export default function TheCrypt() {
     <ReactLenis root>
        <Header />
     <div className={styles.container}>
-      <div className={styles.imageWrapper}  onClick={toggleMute}>
-      <video
-        ref={videoRef}
-        className={styles.image}
-        src="/videos/the_crypt.mp4" // or wherever your video is
-        autoPlay
-        loop
-        muted={isMuted}
-        playsInline
-        //controls // optional if you want user controls
-        />
-        <div className={styles.muteIndicator}>
-        {isMuted ? "Muted (Click to unmute)" : "Playing audio (Click to mute)"}
-        </div>
-      </div  >
+
 
       <div className={styles.text}>
         <h1> The Crypt </h1>
@@ -79,8 +56,8 @@ export default function TheCrypt() {
             </div>
         </div>
 
-        <div ref={description2} className={styles.description2}>
-            <div className={styles.body2}>
+        <div ref={description2} className={styles.description}>
+            <div className={styles.body}>
                 <p>
                 {
                     phrase2.split(" ").map( (word, index) => {
@@ -95,7 +72,22 @@ export default function TheCrypt() {
             </div>
         </div>
 
+
+        <div className={styles.videoWrapper}>
+          <iframe
+            className={styles.video}
+            src="https://player.vimeo.com/video/1047257778?badge=0" 
+            width="100%"
+            height="100%"
+            frameBorder="0"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowFullScreen
+            title="Vimeo video"
+          ></iframe>
+        </div>
+
       </div>
+
 
 
     </div>

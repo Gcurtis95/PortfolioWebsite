@@ -40,17 +40,6 @@ export default function HumanXiCocreation() {
   const isInView5 = useInView(description5)
 
 
-  const videoRef = useRef(null);
-  const [isMuted, setIsMuted] = useState(true);
-        
-  const toggleMute = () => {
-        if (videoRef.current) {
-          videoRef.current.muted = !videoRef.current.muted;
-          setIsMuted(videoRef.current.muted);
-          }
-        }
-  
-
 
 
 
@@ -66,7 +55,7 @@ export default function HumanXiCocreation() {
           width={2500}
           height={1667}
           className={styles.image}
-          priority // optional: preload for performance
+          priority 
         />
       </div>
 
@@ -76,7 +65,7 @@ export default function HumanXiCocreation() {
         <h1>Human-X-AI-Installation</h1>
       </div>
 
-      <div className={styles.exhibitions}>
+      <div className={styles.text}>
         <p>
           CVPR 2025 AI Art Gallery <br></br>
           London Tech Week 2025 <br></br>
@@ -110,8 +99,8 @@ export default function HumanXiCocreation() {
         </div>
 
 
-        <div ref={description2} className={styles.description2}>   
-            <div className={styles.body2}>
+        <div ref={description2} className={styles.description}>   
+            <div className={styles.body}>
                 <p>
                 {
                     phrase2.split(" ").map( (word, index) => {
@@ -127,8 +116,8 @@ export default function HumanXiCocreation() {
         </div>
 
 
-        <div ref={description3} className={styles.description3}>   
-            <div className={styles.body3}>
+        <div ref={description3} className={styles.description}>   
+            <div className={styles.body}>
                 <p>
                 {
                     phrase3.split(" ").map( (word, index) => {
@@ -145,7 +134,7 @@ export default function HumanXiCocreation() {
 
 
 
-      <div className={styles.dossier}>
+      <div className={styles.text}>
         <a href="/documents/Beyond_Prompts_Project_Dossier.pdf" target="_blank" rel="noopener noreferrer">
         View the Project Dossier (PDF)
         </a>
@@ -153,21 +142,26 @@ export default function HumanXiCocreation() {
 
 
 
-     <div className={styles.beyondPrompts}>
-      <video
-        className={styles.image3}
-        src="/videos/websitelandscapevideo2.mp4" // or wherever your video is
-        autoPlay
-        loop
-        playsInline
-        controls // optional if you want user controls
-        />
-      </div>
+        <div className={styles.videoWrapper}>
+          <iframe
+            className={styles.video}
+            src="https://player.vimeo.com/video/1083994312?h=d7678fc5f7" 
+            width="100%"
+            height="100%"
+            frameBorder="0"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowFullScreen
+            title="Vimeo video"
+          ></iframe>
+        </div>
+
+
+        
 
 
 
-        <div ref={description4} className={styles.description4}>   
-            <div className={styles.body4}>
+        <div ref={description4} className={styles.description}>   
+            <div className={styles.body}>
                 <p>
                 {
                     phrase4.split(" ").map( (word, index) => {
@@ -182,50 +176,59 @@ export default function HumanXiCocreation() {
             </div>
         </div>
 
-    <div className={styles.AVHeader}>
+    <div className={styles.text2}>
       <h2> AudioVisual</h2>
       <p> Below is an audiovisual created using the same technique. Music written and performed by me</p> 
     </div>
 
 
 
+        <div className={styles.videoWrapper}>
+          <iframe
+            className={styles.video}
+            src="https://player.vimeo.com/video/1082586969?h=81268b7d90" 
+            width="100%"
+            height="100%"
+            frameBorder="0"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowFullScreen
+            title="Vimeo video"
+          ></iframe>
+        </div>
 
 
-        <div className={styles.AudioVisual}  >
-        <video
-     
-          className={styles.AV}
-          src="/videos/websiteaudiovisualhumanxai.mp4" 
-          autoPlay
-          loop
-          muted={isMuted}
-          playsInline
-          controls 
-          />
-
-        </div  >
 
 
-    <div className={styles.touchHeader}>
+
+
+
+    <div className={styles.text}>
       <h2> Behind the scenes </h2>
     </div>
 
-     <div className={styles.touchdesigner}>
-      <video
-        className={styles.image2}
-        src="/videos/touchdesignerPlugin.mp4" 
-        autoPlay
-        loop
-        playsInline
-        //controls 
-        />
-      </div>
+
+        <div className={styles.videoWrapper}>
+          <iframe
+            className={styles.video}
+            src="https://player.vimeo.com/video/1045850504?badge=0" 
+            width="100%"
+            height="100%"
+            frameBorder="0"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowFullScreen
+            title="Vimeo video"
+          ></iframe>
+        </div>
+
+
+
+
 
 
 
     
-        <div ref={description5} className={styles.description5}>   
-            <div className={styles.body5}>
+        <div ref={description5} className={styles.description}>   
+            <div className={styles.body}>
                 <p>
                 {
                     phrase5.split(" ").map( (word, index) => {

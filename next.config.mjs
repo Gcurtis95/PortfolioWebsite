@@ -1,19 +1,25 @@
-
-
 /** @type {import('next').NextConfig} */
 
 const nextConfig = {
-    reactStrictMode: true,
-    webpack: (config, options) => {
-        config.module.rules.push({
-            test: /\.(glsl|vs|fs|vert|frag)$/,
-            use: ['raw-loader', 'glslify-loader'],
-        });
+  reactStrictMode: true,
+  webpack: (config, options) => {
+    config.module.rules.push({
+      test: /\.(glsl|vs|fs|vert|frag)$/,
+      use: ['raw-loader', 'glslify-loader'],
+    });
+    return config;
+  },
+  transpilePackages: ['three'],
 
-        return config;
+async redirects() {
+  return [
+    {
+      source: '/ancestral-\\(r\\)evocations-tate-modern',
+      destination: '/projects/ancestral-%28r%29evocations-tate-modern',
+      permanent: true,
     },
-    transpilePackages: ['three'],
-
+  ];
+}
 };
 
 export default nextConfig;
