@@ -55,7 +55,8 @@ export default function HumanXiCocreation() {
           width={2500}
           height={1667}
           className={styles.image}
-          priority 
+          quality={70}
+
         />
       </div>
 
