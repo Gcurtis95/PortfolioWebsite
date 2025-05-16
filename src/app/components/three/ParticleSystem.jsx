@@ -201,7 +201,7 @@ const ParticleSystem = ({ onLoaded }) => {
 
 
             const loadModel = async () => {
-                const  gltf  = await gltfLoader.loadAsync('/models/whale3.glb');
+                const  gltf  = await gltfLoader.loadAsync('/models/Whale3.glb');
 
 
 
