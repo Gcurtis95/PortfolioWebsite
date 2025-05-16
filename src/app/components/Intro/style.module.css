@@ -1,0 +1,235 @@
+.homeHeader{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 100vh; /* This is key */
+    overflow: hidden;
+}
+
+
+
+.intro{
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    margin: 0 auto;  
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.intro h1{
+    display: flex;
+    top: 1rem;
+    left: 1rem;
+    position: absolute;
+    color: white;
+    font-size: 11rem;
+    z-index: 2;
+    pointer-events: none;
+    font-family: var(--font-HelveticaBold-mono)
+
+}
+
+.intro h2{
+    color: white;
+    font-size: 11rem;
+    z-index: 2;
+    position: absolute;
+    top: 25%;
+    right: 2rem;
+    transform: translateY(-50%);
+    text-align: right;
+    pointer-events: none;
+    font-family: var(--font-HelveticaBold-mono)
+}
+
+
+.intro h3{
+    display: flex;
+    top: 40rem;
+    left: 8rem;
+    position: absolute;
+    color: white;
+    font-size: 3rem;
+    z-index: 2;
+    pointer-events: none;
+
+}
+
+.intro h4{
+    color: white;
+    font-size: 3rem;
+    z-index: 2;
+    position: absolute;
+    top: 42rem;
+    left: 12rem;
+
+    text-align: right;
+    pointer-events: none;
+}
+
+
+
+.homeHeader canvas {
+    position: absolute !important;
+    top: 3.5rem;
+    left: 0;
+    width: 100% !important;
+    height: 90% !important;
+    z-index: 0;
+
+  }
+
+  .topLine {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    z-index: 10; /* higher than canvas */
+  }
+
+  .headerTop h1{
+    color: white;
+    font-size: 2rem;
+    z-index: 2;
+    position: absolute;
+    top: 0.5rem;
+    right:20rem;
+    transform: translateY(-50%);
+    text-align: right;
+    pointer-events: none;
+
+  }
+
+
+  .clock {
+
+    color: white;
+    font-size: 2rem;
+    z-index: 2;
+    position: absolute;
+    top: 1.8rem;
+    right:5rem;
+    transform: translateY(-50%);
+    text-align: right;
+    pointer-events: none;
+
+
+  }
+
+
+
+
+
+  @media screen and (max-width: 768px) {
+    .intro h1,
+    .intro h2 {
+      font-size: 3rem;
+      top: 2rem;
+      left: 1rem;
+      right: 1rem;
+      text-align: left;
+    }
+  
+    .intro h2 {
+      top: 6rem;
+      text-align: left;
+      right: 1rem;
+      transform: none;
+    }
+  
+    .intro h3,
+    .intro h4 {
+      font-size: 1.5rem;
+      top: auto;
+      bottom: 4rem;
+      left: 1rem;
+      right: 1rem;
+      position: absolute;
+    }
+  
+    .intro h4 {
+      bottom: 2rem;
+      left: 1rem;
+    }
+  
+    .headerTop h1{
+      font-size: 1.2rem;
+      top: 0.2rem;
+      left: 5rem;
+
+    }
+    .clock {
+      font-size: 1.2rem;
+      top: 1rem;
+      left: 3rem;
+    }
+  
+    .homeHeader canvas {
+      top: 2rem;
+      height: 100%;
+    }
+  
+    .topLine {
+      top: 30px;
+    }
+  }
+
+
+
+  @media screen and (max-height: 500px) and (orientation: landscape) {
+    .intro h1,
+    .intro h2 {
+      font-size: 4rem;
+      top: 1rem;
+      left: 1rem;
+      right: 1rem;
+      text-align: left;
+    }
+  
+    .intro h2 {
+      top: 4rem;
+      transform: none;
+    }
+  
+    .intro h3,
+    .intro h4 {
+      font-size: 1.2rem;
+      top: auto;
+      bottom: 3rem;
+      left: 1rem;
+      right: 1rem;
+      position: absolute;
+    }
+  
+    .intro h4 {
+      bottom: 1rem;
+      left: 1rem;
+    }
+  
+    .headerTop h1 {
+      font-size: 1rem;
+      top: 0.15rem;
+      left: 4rem;
+    }
+  
+    .clock {
+      font-size: 1rem;
+      top: 0.8rem;
+      left: 2rem;
+    }
+  
+    .homeHeader canvas {
+      top: 2rem;
+      height: 100%;
+    }
+  
+    .topLine {
+      top: 25px;
+    }
+  }

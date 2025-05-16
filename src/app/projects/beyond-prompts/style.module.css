@@ -1,0 +1,661 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 0;
+  text-align: left;
+  width: 100%;
+  height:100%;
+}
+
+.imageWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height:100%;
+}
+
+.image {
+  max-width: 61rem;
+  height: auto;
+
+  margin-top: 3rem;
+
+}
+
+.text {
+  text-align: left;
+  max-width: 1000px;
+  color: #ccc;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.text h1 {
+  font-size: 10rem;
+  margin: 1rem 0 0 0;
+  font-family: var(--font-HelveticaBold-mono);
+}
+
+.exhibitions {
+  font-size: 5rem;
+  padding: 0 200px;
+  margin-top: 50px;
+  color: #ccc;
+}
+
+
+.description{
+  padding-left: 200px;
+  padding-right: 200px;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: left;
+  .body{
+      max-width: 63rem;
+      display: flex;
+      gap: 50px;
+      position: relative;
+      p{
+          color: #ccc;
+          margin: 0px;
+          &:nth-of-type(1){
+              font-size: 1.5rem;
+              gap: 8px;
+              line-height: 1.3;
+              span{
+                  margin-right: 3px;
+              }
+              .mask{
+                  position: relative;
+                  overflow: hidden;
+                  display: inline-flex;
+              }
+          }
+
+      }
+    }
+  }
+
+
+
+  .description2{
+    padding-left: 200px;
+    padding-right: 200px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: left;
+    .body2{
+        max-width: 63rem;
+        display: flex;
+        gap: 50px;
+        position: relative;
+        p{
+            color: #ccc;
+            margin: 0px;
+            &:nth-of-type(1){
+                font-size: 1.5rem;
+                gap: 8px;
+                line-height: 1.3;
+                span{
+                    margin-right: 3px;
+                }
+                .mask{
+                    position: relative;
+                    overflow: hidden;
+                    display: inline-flex;
+                }
+            }
+  
+        }
+      }
+    }
+
+
+    .description3{
+      padding-left: 200px;
+      padding-right: 200px;
+      margin-top: 50px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      text-align: left;
+      .body3{
+          max-width: 63rem;
+          display: flex;
+          gap: 50px;
+          position: relative;
+          p{
+              color: #ccc;
+              margin: 0px;
+              &:nth-of-type(1){
+                  font-size: 1.5rem;
+                  gap: 8px;
+                  line-height: 1.3;
+                  span{
+                      margin-right: 3px;
+                  }
+                  .mask{
+                      position: relative;
+                      overflow: hidden;
+                      display: inline-flex;
+                  }
+              }
+    
+          }
+        }
+      }
+
+
+
+    .description4{
+      padding-left: 200px;
+      padding-right: 200px;
+      margin-top: 50px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      text-align: left;
+      .body4{
+          max-width: 63rem;
+          display: flex;
+          gap: 50px;
+          position: relative;
+          p{
+              color: #ccc;
+              margin: 0px;
+              &:nth-of-type(1){
+                  font-size: 1.5rem;
+                  gap: 8px;
+                  line-height: 1.3;
+                  span{
+                      margin-right: 3px;
+                  }
+                  .mask{
+                      position: relative;
+                      overflow: hidden;
+                      display: inline-flex;
+                  }
+              }
+    
+          }
+        }
+      }
+
+
+    .description5{
+      padding-left: 200px;
+      padding-right: 200px;
+      margin-top: 50px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      text-align: left;
+      .body5{
+          max-width: 63rem;
+          display: flex;
+          gap: 50px;
+          position: relative;
+          p{
+              color: #ccc;
+              margin: 0px;
+              &:nth-of-type(1){
+                  font-size: 1.5rem;
+                  gap: 8px;
+                  line-height: 1.3;
+                  span{
+                      margin-right: 3px;
+                  }
+                  .mask{
+                      position: relative;
+                      overflow: hidden;
+                      display: inline-flex;
+                  }
+              }
+    
+          }
+        }
+      }
+
+  .dossier
+  {
+
+    padding-right: 48.5rem;
+    margin-top: 5rem;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    a {
+      color: #ccc;
+      text-align: left;
+      text-decoration: none;
+      max-width: 1000px;
+      display: flex;
+      position: relative;
+
+
+    }
+
+
+  }
+  .dossier a:hover {
+    color: #D91E1E;
+  }
+
+  .touchHeader{
+    font-size: 6rem;
+    margin-bottom: 0rem;
+    /* font-family: var(--font-HelveticaBold-mono); */
+    margin-top: 0;
+    z-index: 0;
+    left: 100rem;
+    text-align: left;
+    justify-content: center;
+    align-items: center;
+    color: #ccc;
+    max-width: 63rem;
+
+    
+
+
+  }
+
+
+
+
+
+  .beyondPrompts{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin-top: 5rem;
+
+
+  }
+  .image3 {
+    margin-top: 1rem;
+    max-width: 63rem;
+
+  }
+
+
+  .touchdesigner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+
+  }
+  .image2 {
+    margin-top: 1rem;
+    max-width: 63rem;
+
+
+  }
+
+
+      .AVHeader{
+      text-align: left;
+      max-width: 63rem;
+      color: #ccc;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      font-size: 6rem;
+      margin: 1rem 0 0 0;
+      p{
+        font-size: 1.5rem;
+
+        }
+    
+
+
+  }
+
+
+
+.AudioVisual {
+  display: flex;
+  flex-direction: column; /* stack AV and mute indicator vertically */
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 5rem;
+}
+
+.AV {
+  max-width: 64rem;
+
+
+
+}
+
+.muteIndicator {
+  margin-top: 1rem;
+  background: rgba(0, 0, 0, 0.6);
+  color: rgba(204, 204, 204, 0.6);
+  padding: 5px 10px;
+  font-size: 0.9rem;
+  border-radius: 4px;
+  pointer-events: none;
+  text-align: center;
+}
+
+
+
+
+
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .text h1 {
+    font-size: 3rem;
+    padding-left: 1rem;
+    margin-top: 3rem;
+  }
+  .exhibitions {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-top: 3rem;
+    font-size: 2rem;
+  }
+
+  .image {
+    margin-top: 5rem;
+    max-width: 90%;
+  }
+
+  .description {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .description .body {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .description2 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .description .body2 {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .description3 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .description .body3 {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .description4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .description .body4 {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .description5 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .description .body5 {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+
+  .description .body p:nth-of-type(1) {
+    font-size: 1.1rem;
+  }
+
+
+.description2 .body2 p:nth-of-type(1) {
+  font-size: 1.1rem;
+}
+
+.description3 .body3 p:nth-of-type(1) {
+  font-size: 1.1rem;
+}
+
+.description4 .body4 p:nth-of-type(1) {
+  font-size: 1.1rem;
+}
+
+.description5 .body5 p:nth-of-type(1) {
+  font-size: 1.1rem;
+}
+.dossier{
+  font-size: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 18rem;
+  a{
+    color: #D91E1E;
+
+  }
+  
+
+}
+.image2 {
+  margin-top: 1rem;
+  max-width: 95%;
+  height: 95%;
+
+}
+.touchHeader{
+  font-size: 1rem;
+  text-align: left;
+
+  margin-top: 3rem;
+  border-radius: 10px;
+
+}
+.image3 {
+  margin-top: 1rem;
+  max-width: 95%;
+  height: 95%;
+
+}
+.beyondPrompts{
+  font-size: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-top: 3rem;
+
+}
+.AudioVisual {
+  margin-top: 2rem;
+}
+
+.AV {
+
+  max-width: 95%;
+  height: 95%;
+}
+
+.muteIndicator {
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+}
+.AVHeader{
+  font-size: 3rem;
+  padding-left: 2rem;
+
+  margin-top: 3rem;
+
+  p{
+     font-size: 1.1rem;
+      padding-left: 0rem;
+      padding-right: 1rem;
+  }
+
+
+}
+
+
+
+
+
+}
+
+
+@media (max-height: 500px) and (orientation: landscape) {
+  .text h1 {
+    font-size: 4rem;
+    padding-left: 5rem;
+    margin-top: 2rem;
+  }
+
+  .exhibitions {
+    padding: 0 1rem;
+    font-size: 2.5rem;
+  }
+
+  .image {
+    margin-top: 4rem;
+    max-width: 80%;
+  }
+
+  .description {
+    padding-left: 5rem;
+    padding-right: 1rem;
+  }
+
+  .description .body {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .description2 {
+    padding-left: 5rem;
+    padding-right: 1rem;
+  }
+
+  .description .body2 {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .description3 {
+    padding-left: 5rem;
+    padding-right: 1rem;
+  }
+
+  .description .body3 {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .description4 {
+    padding-left: 5rem;
+    padding-right: 1rem;
+  }
+
+  .description .body4 {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .description5 {
+    padding-left: 5rem;
+    padding-right: 1rem;
+  }
+
+  .description .body5 {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+
+  .description .body p:nth-of-type(1) {
+    font-size: 1.1rem;
+  }
+
+
+.description2 .body2 p:nth-of-type(1) {
+  font-size: 1.1rem;
+}
+
+.description3 .body3 p:nth-of-type(1) {
+  font-size: 1.1rem;
+}
+.description4 .body4 p:nth-of-type(1) {
+  font-size: 1.1rem;
+}
+
+.description5 .body5 p:nth-of-type(1) {
+  font-size: 1.1rem;
+}
+
+  .dossier {
+    padding: 0 2rem;
+    font-size: 0.9rem;
+  }
+
+  .image2 {
+    max-width: 85%;
+  }
+
+  .touchHeader {
+    font-size: 2.5rem;
+    padding: 0 2rem;
+    margin-top: 2rem;
+  }
+
+    .AV {
+    max-width: 85%;
+    height: auto;
+    margin-top: 2rem;
+    
+  }
+
+  .AVHeader {
+    font-size: 3rem;
+    padding: 0 2rem;
+    margin-left: 10rem;
+    p{
+      font-size: 1.1rem;
+      padding-left: 0rem;
+      padding-right: 1rem;
+      }
+  }
+  .image3{
+    max-width: 80%;
+    height: auto;
+    margin-top: 2rem;
+
+  }
+}
+
+
+
+
+
+
+
+      
+
+

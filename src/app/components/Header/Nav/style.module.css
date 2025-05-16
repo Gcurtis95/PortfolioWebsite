@@ -1,0 +1,63 @@
+.nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 100px 40px 50px 40px;
+    height: 100%;
+   box-sizing: border-box;
+    .body{
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+        .linkContainer{
+            perspective: 300px;
+            perspective-origin: top;
+        }
+        a{
+            text-decoration: none;
+            color: #ccc;
+            font-size: 46px;
+
+            &:hover{
+                color: #D91E1E;
+
+            }
+
+        }
+    }
+
+}
+
+
+@media screen and (max-width: 768px) {
+    .nav {
+      padding: 60px 60px 0px 20px;
+
+  
+      .body {
+        gap: 20px;
+  
+        a {
+          font-size: 28px; /* Scaled down for mobile readability */
+        }
+      }
+    }
+  }
+
+
+  @media screen and (max-height: 500px) {
+    .nav {
+      padding: 60px 60px 0px 20px;
+
+  
+      .body {
+        gap: 20px;
+  
+        a {
+          font-size: 30px; /* Scaled down for mobile readability */
+        }
+      }
+    }
+  }
+
+  

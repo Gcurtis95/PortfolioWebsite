@@ -1,0 +1,65 @@
+.main {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    text-decoration: none;
+  }
+
+  .intro {
+    color: #ccc;
+    /* display: block; */
+    flex-direction: column;
+    padding-left: 2rem;
+    font-size: 4rem;
+    line-height: 1.1;
+
+
+
+
+
+  }
+  .intro p{
+    font-size: 1.5rem;
+
+
+
+  }
+  
+  .gallery{
+    width: 100%;
+    color: #ccc;
+    text-decoration: none;
+  }
+
+  .gallery a {
+    text-decoration: none;
+    color: inherit; /* optional: inherit color from parent */
+  }
+
+  /* 📱 Mobile-specific layout */
+@media screen and (max-width: 768px) {
+  .main {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    /* padding: 1rem 0.5rem; */
+  }
+
+  .gallery {
+    width: 100%;
+    font-size: 1rem;
+  }
+    .intro {
+    /* display: block; */
+    padding-left: 1rem;
+
+
+    font-size: 2rem;
+
+
+
+
+
+  }
+}
