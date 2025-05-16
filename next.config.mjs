@@ -18,6 +18,16 @@ async redirects() {
       destination: '/projects/ancestral-%28r%29evocations-tate-modern',
       permanent: true,
     },
+    {
+      source: '/beyond-prompts',
+      destination: '/projects/beyond-prompts',
+      permanent: true,
+    },
+    {
+      source: '/the-crypt',
+      destination: '/projects/the-crypt',
+      permanent: true,
+    },
   ];
 }
 };

@@ -28,7 +28,7 @@ ScrollTrigger.getAll().forEach(trigger => trigger.kill());
 const ParticleSystem = ({ onLoaded }) => {
 
     const canvasRef = useRef(null);
-    const isVisibleRef = useRef(true); // Track visibility in a mutable ref
+    const isVisibleRef = useRef(true); 
 
 
 
@@ -64,9 +64,9 @@ const ParticleSystem = ({ onLoaded }) => {
         let animationFrameId;
         let scene, camera, renderer, controls;
         let particles = null;
-        let gpgpu = null; // <<== define particles safely here
-        let baseParticlesTexture = null; // <<== define particles safely here
-        let baseGeometry = null; // <<== define particles safely here
+        let gpgpu = null; 
+        let baseParticlesTexture = null; 
+        let baseGeometry = null; 
 
 
 
@@ -149,9 +149,9 @@ const ParticleSystem = ({ onLoaded }) => {
             const isMobile = window.matchMedia('(max-width: 768px)').matches;
 
             if (isMobile) {
-            camera.position.set(-10, 0, -5); // example values for mobile
+            camera.position.set(-10, 0, -5); 
             } else {
-            camera.position.set(-5, 0, -1.5); // desktop default
+            camera.position.set(-5, 0, 0); 
             }
 
 
@@ -164,7 +164,7 @@ const ParticleSystem = ({ onLoaded }) => {
             scene.add(camera)
 
             // const stats = new Stats()
-            // stats.showPanel(0) // 0: fps, 1: ms, 2: mb, 3+: custom
+            // stats.showPanel(0) 
             // document.body.appendChild(stats.dom)
 
             // const helper = new THREE.AxesHelper(5);
@@ -201,7 +201,7 @@ const ParticleSystem = ({ onLoaded }) => {
 
 
             const loadModel = async () => {
-                const  gltf  = await gltfLoader.loadAsync('/models/whale2.glb');
+                const  gltf  = await gltfLoader.loadAsync('/models/whale3.glb');
 
 
 
@@ -346,7 +346,7 @@ const ParticleSystem = ({ onLoaded }) => {
                         }
                 }
 
-                 // Define a plane to intersect with — z = 0.5 (same as your shader)
+     
                 const xPlane = new THREE.Plane(new THREE.Vector3(1, 0, 0), planeAmount); // plane at x = 0
 
 
