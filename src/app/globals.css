@@ -2,7 +2,7 @@ html, body {
   margin: 0;
   background-color: black;
   font-family: var(--font-roboto), sans-serif;
-  cursor: wait;
+  /* cursor: wait; */
   overflow-x: hidden;
 }
 
