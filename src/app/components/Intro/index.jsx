@@ -6,7 +6,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import ParticleSystem from '../three/ParticleSystem.jsx';
 import localFont from 'next/font/local'
 import LondonClock from './LondonClock.jsx';
-import VideoParticleSystem from '../MainPageVideo/VideoParticleSystem.jsx';
+
 
 const myFont = localFont({ src: './fonts/PoeticalRegular.otf' })
 

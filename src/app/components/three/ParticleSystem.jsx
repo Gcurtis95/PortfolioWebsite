@@ -420,7 +420,7 @@ const ParticleSystem = ({ onLoaded }) => {
 
                         // Scroll animation with GSAP
                     gsap.to(camera.position, {
-                    z: -4,
+                    z: -3,
                     scrollTrigger: {
                     trigger: document.documentElement,
                     start: "top",
