@@ -17,7 +17,7 @@ export default function Projects2() {
     {
       title1: "Human × AI",
       title2: " Installation",
-      src: "../../images/humanAI1.JPG",
+      src: "../../images/humanAI1.jpg",
       slug: "/projects/beyond-prompts",
       external: false
     },
