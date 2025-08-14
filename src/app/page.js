@@ -4,7 +4,7 @@ import styles from "./page.module.css";
 import Intro from './components/Intro';
 import Description from './components/Description';
 import ReactLenis from "@studio-freight/react-lenis";
-import Projects2 from './components/ProjectsList1';
+import Projects1 from './components/ProjectsList1';
 import Preloader from './components/Preloader';
 import AudioVisual from "./components/AudioVisual";
 import Footer from './components/Footer';
@@ -33,7 +33,7 @@ export default function Home() {
           document.body.style.cursor = 'default';
         }}/>
 
-        <Projects2 />
+        <Projects1 />
 
         <Footer />
 

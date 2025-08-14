@@ -3,28 +3,15 @@
   flex-direction: row;
   width: 100%;
   z-index: 0;
-  margin-left: 2.5rem;
-  margin-top: 5rem;
-
+  margin-left: 2.5%;
+  margin-top: 2.5%;
 }
 
-.imageWrapper {
 
-  justify-content: left;
-  align-items: left;
-
-}
-
-.image {
-  max-width: 60rem;
-  height: auto;
-  border-radius: 0;
-  margin-top: 1rem;
-}
 
 .text {
-  margin-left: 2.5rem;
-  margin-top: 10rem;
+  margin-left: 2.5%;
+  margin-top: 7.5%;
   text-align: left;
   max-width: 100%;
   color: #ccc;
@@ -38,34 +25,43 @@
   text-align: left;
 }
 
+
+.imageWrapper {
+  margin-top: 1rem;
+  max-width: 50%;
+
+}
+
+.image {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+
+
 .description {
+  max-width: 50%;
   margin-top: 10%;
-  margin-left: 2.5%;
+  margin-left: 5%;
+
 
 }
 
 .description .body {
-  max-width: 90%;
+  display: flex;
+  max-width: 80%;
   gap: 50px;
 
 }
 
 .description .body p {
   color: #cccccc;
-  margin: 0;
   font-size: 1rem;
   /* line-height: 1.3; */
 }
 
-.description .body p span {
-  margin-right: 3px;
-}
-
-.description .body p .mask {
-  position: relative;
-  overflow: hidden;
-  display: inline-flex;
-}
 
 .info {
  
@@ -84,6 +80,9 @@
 .info a:hover {
   color: #D91E1E;
 }
+
+
+
 @media (max-width: 768px) and (orientation: portrait) {
 
 
@@ -109,20 +108,27 @@
 
   }
 
+  .imageWrapper {
+  margin-top: 1rem;
+  max-width: 100%;
+
+}
+
   .image {
     max-width: 90%;
   }
 
-  /* .description {
-    padding: 0 1rem;
-  } */
+  .description {
+    max-width: 100%;
+  }
 
   .description .body {
-    flex-direction: column;
-    gap: 20px;
+    max-width: 100%;
+
   }
 
   .description .body p {
+    width: 90%;
     font-size: 1rem;
   }
 
@@ -163,17 +169,24 @@
 
   }
 
+
+  .imageWrapper {
+  margin-top: 1rem;
+  max-width: 100%;
+
+}
+
   .image {
     max-width: 90%;
   }
 
-  /* .description {
-    padding: 0 1rem;
-  } */
+  .description {
+    max-width: 100%;
+  }
 
   .description .body {
-    flex-direction: column;
-    gap: 20px;
+    width: 100%;
+
   }
 
   .description .body p {

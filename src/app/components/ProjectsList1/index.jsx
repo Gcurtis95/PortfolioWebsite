@@ -10,7 +10,7 @@ export default function Projects2() {
     {
       title1: "Ancestral (R)evocations  ",
       title2: "- Tate Modern",
-      src: "../../images/ancestral picture.png",
+      src: "../../images/Erika_Tan_Ancestral.jpg",
       slug: "/projects/ancestral-(r)evocations-tate-modern",
       external: false
     },

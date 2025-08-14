@@ -26,8 +26,6 @@ export default function AncestralRevocations() {
 
 
 
-
-
   return (
     <ReactLenis root>
        <Header />
@@ -38,23 +36,17 @@ export default function AncestralRevocations() {
       </div>
 
     <div className={styles.container}>
+
       <div className={styles.imageWrapper}>
         <Image
           src="/images/Erika_Tan_Ancestral.jpg"
           alt="Ancestral (R)evocations"
-          width={2557}
-          height={1595}
+          width={1382}
+          height={922}
           className={styles.image}
           priority 
         />
       </div>
-
-
-
-
-
-
-
 
       <div ref={description} className={styles.description}>
             <div className={styles.body}>
@@ -71,39 +63,7 @@ export default function AncestralRevocations() {
                 </p>
             </div>
         </div>
-
-
-
-
-
-
-
-{/* 
-        <div className={styles.videoWrapper}>
-          <iframe
-            className={styles.video}
-            src="https://player.vimeo.com/video/1082600535?h=e511342e6b" 
-            width="100%"
-            height="100%"
-            frameBorder="0"
-            allow="autoplay; fullscreen; picture-in-picture"
-            allowFullScreen
-            title="Vimeo video"
-          ></iframe>
-        </div> */}
-
-
-
-
-        
-        </div>  
-
-
-
-
-
-      
-
+      </div>  
 
     <Footer/>
     </ReactLenis>
