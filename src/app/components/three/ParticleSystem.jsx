@@ -191,11 +191,11 @@ const ParticleSystem = ({ onLoaded }) => {
             const rotateMode = Math.floor(Math.random() * 2) + 1;
 
 
-            if(rotateMode == 1)
-            {
-                dirc = -1;
-                AMT = 0.2;
-            }
+            // if(rotateMode == 1)
+            // {
+            //     dirc = -1;
+            //     AMT = 0.2;
+            // }
 
 
 
@@ -337,14 +337,14 @@ const ParticleSystem = ({ onLoaded }) => {
                     particles.points.rotation.y = 180 * Math.PI / 180;
                     
                 } 
-                else {
-                    if(rotateMode == 1)
-                        {
-                            particles.points.rotation.y = 180 * Math.PI / 180;
-                            planeAmount = 3;
+                // else {
+                //     if(rotateMode == 1)
+                //         {
+                //             particles.points.rotation.y = 180 * Math.PI / 180;
+                //             planeAmount = 3;
                             
-                        }
-                }
+                //         }
+                // }
 
      
                 const xPlane = new THREE.Plane(new THREE.Vector3(1, 0, 0), planeAmount); // plane at x = 0
