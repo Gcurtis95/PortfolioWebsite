@@ -1,0 +1,98 @@
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+
+.header {
+
+    width: 25%;
+
+
+
+}
+
+.header h1{
+
+    margin-top: 9%;
+    margin-left: 20%;
+    font-size: 2.5rem;
+
+    color: #0A0A0A;
+}
+
+.header h3{
+
+    margin-top: 15%;
+    margin-left: 20%;
+
+
+    color: #0A0A0A;
+}
+
+
+
+.projects {
+    width: 75%;
+    align-items: center; /* Vertical alignment */
+
+
+
+}
+
+
+.cvpr{
+
+
+    margin-top: 3%;
+    margin-left: 8.7%;
+    width: 90%;
+    height: 92%;
+    border: 3px solid #0A0A0A;
+    align-items: center; /* Vertical alignment */
+
+    border-radius: 20px;
+    background-color: #0A0A0A;
+    display: flex;
+    flex-direction: row;
+    
+
+
+
+}
+
+.cvprImage {
+    width: 50%;
+
+
+}
+
+
+.image{
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    margin-left: 5%;
+    margin-top: 0.5%;
+
+
+
+}
+
+
+.cvprText {
+    width: 50%;
+
+
+
+  
+
+}
+
+.cvprText h2 {
+
+    margin-left: 50%;
+
+    color : #ffffff;
+}

@@ -3,14 +3,12 @@ import styles from './style.module.css';
 import { useEffect, useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { opacity, slideUp } from './anim';
-import localFont from 'next/font/local'
-
-
-const preLoadFont = localFont({ src: './digital.ttf' })
 
 
 
-const words = ["Loading", "20", "30", "40", "50", "60", "70", "80"]
+
+
+const words = ["10", "20", "30", "40", "50", "60", "70", "80", "90", "100"]
 
 
 
@@ -56,7 +54,7 @@ export default function Preloader() {
     return (
 
 
-      <main className={preLoadFont.className}>
+      <main>
 
         <motion.div variants={slideUp} initial="initial" exit="exit" className={styles.introduction}>
 
@@ -64,7 +62,8 @@ export default function Preloader() {
 
             <>
 
-                <motion.p variants={opacity} initial="initial" animate="enter"><span></span>{words[index]}</motion.p>
+                {/* <motion.p variants={opacity} initial="initial" animate="enter"><span></span>{words[index]}</motion.p> */}
+                <motion.p variants={opacity} initial="initial" animate="enter"> Garin Curtis</motion.p>
 
                 <svg>
 

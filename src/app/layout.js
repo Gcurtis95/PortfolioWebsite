@@ -1,6 +1,7 @@
 import "./globals.css";
 import { ViewTransitions } from 'next-view-transitions';
 import { Roboto } from 'next/font/google';
+import Header from './components/Header2';
 
 // Load Roboto with default weight/style (you can customize it)
 const roboto = Roboto({
@@ -20,6 +21,7 @@ export default function RootLayout({ children }) {
     <ViewTransitions>
       <html lang="en">
         <body className={roboto.variable}>
+          <Header />
           {children}
         </body>
       </html>

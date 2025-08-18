@@ -2,7 +2,7 @@
     position: relative;
     height: 400px;
     width: 100%;
-    background-color: #ccc;
+    background-color: #171717;
     clip-path: polygon(0% 0, 100% 0%, 100% 100%, 0 100%);
     padding: 4rem 2rem;
     box-sizing: border-box;
@@ -43,6 +43,7 @@
     right: 5rem;
     bottom: 0;
     text-decoration: none;
+    color: #FAFAFA;
 
 
     
@@ -70,7 +71,7 @@
 
   .navBar {
     position: relative;
-    color: #000;
+    color: #FAFAFA;
     top: 0;
     left: 0;
     padding: 1rem;
@@ -95,7 +96,7 @@
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s ease;
-    color: #000;
+    color: #FAFAFA;
     font-family: var(--font-HelveticalOblique-mono);
     
   }

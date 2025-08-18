@@ -1,6 +1,6 @@
 html, body {
   margin: 0;
-  background-color: black;
+  background-color: #FAFAFA;
   font-family: var(--font-roboto), sans-serif;
   /* cursor: wait; */
   overflow-x: hidden;
