@@ -40,7 +40,7 @@ export default function Home() {
         }}/>
 
         <InfinteText />
-        {/* <LandingPage1 /> */}
+        <LandingPage1 />
         <LandingPage2 />
         {/* <Projects1 /> */}
         <LandingPage3 />

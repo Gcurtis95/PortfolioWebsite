@@ -1,7 +1,7 @@
 .homeHeader{
     position: relative;
     width: 97.5%;
-    height: 95vh;
+    height: 100vh;
     overflow: hidden;
     margin-left: 1.25%;
     margin-bottom: 0%;
@@ -94,7 +94,7 @@
 .bottomline h5{ 
   width: 50%;
   margin-left: 8rem;
-  margin-top: 2rem;
+  margin-top: 3rem;
   font-size: 1.25rem;
 
 

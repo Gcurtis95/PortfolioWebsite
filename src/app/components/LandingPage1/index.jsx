@@ -16,65 +16,11 @@ import { gsap } from "gsap";
 export default function LandingPage1() {
 
 
-    const firstText = useRef(null);
-
-    const secondText = useRef(null);
-
-    const slider = useRef(null);
-
-    let direction = -1;
-
-    let xPercent = 0;
-
-
-
-    useEffect( () => {
-
-        gsap.set(secondText.current, {left: secondText.current.getBoundingClientRect().width})
-
-        requestAnimationFrame(animate);
-
-    }, [])
-
-
-
-    const animate = () => {
-
-        if(xPercent > 0){
-
-            xPercent = -100;
-
-        }
-
-        gsap.set(firstText.current, {xPercent: xPercent})
-
-        gsap.set(secondText.current, {xPercent: xPercent})
-
-        requestAnimationFrame(animate);
-
-        xPercent += 0.1 * direction;
-
-}
 
 return ( 
 
 
 <div className={styles.container}> 
-
-      <div className={styles.sliderContainer}>
-
-        <div ref={slider} className={styles.slider}>
-
-          <p ref={firstText}>WORK &nbsp;&nbsp; FEATURED PROJECTS </p>
-
-          <p ref={secondText}>WORK &nbsp;&nbsp; FEATURED PROJECTS </p>
-
-        </div>
-
-
-
-
-    </div>
 
 
     <div className={styles.projects}>
