@@ -13,7 +13,7 @@ export default function Footer() {
         <nav className={style.navBar}>
             <ul>
               <li><a href="https://github.com/Gcurtis95" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-              <li><a href="/documents/Garin_Curtis_CV_July_2025_AIEng.pdf" target="_blank" rel="noopener noreferrer">CV</a></li>
+              <li><a href="/documents/Garin_Curtis_CV_Machine_Learning_Engineer.pdf" target="_blank" rel="noopener noreferrer">CV</a></li>
               <li><a href="https://www.linkedin.com/in/garin-curtis-456038346/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
             </ul>
         </nav>
