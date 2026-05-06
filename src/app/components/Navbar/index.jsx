@@ -33,7 +33,7 @@ export default function Navbar({ active, onNavigate }) {
         )}
       </ul>
 
-      <span className={styles.name}>GARIN CURTIS</span>
+      {/* <span className={styles.name}>GARIN CURTIS</span> */}
 
       <div className={styles.location}>
         <span className={styles.city}>LONDON</span>
