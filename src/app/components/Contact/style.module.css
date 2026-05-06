@@ -1,0 +1,78 @@
+.section {
+  background-color: rgba(5, 5, 5, 0.6);
+  padding: 5rem 2.5%;
+  font-family: var(--font-roboto), sans-serif;
+  min-height: 100vh;
+}
+
+.header {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 4rem;
+}
+
+.label {
+  font-size: 0.7rem;
+  letter-spacing: 0.25em;
+  color: #f0ede8;
+  text-transform: uppercase;
+}
+
+.email {
+  display: block;
+  font-size: clamp(1.8rem, 4vw, 3.5rem);
+  font-weight: 400;
+  color: #f0ede8;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  text-decoration: none;
+  margin-bottom: 5rem;
+  transition: opacity 0.2s;
+}
+
+.email:hover {
+  opacity: 0.6;
+}
+
+.links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.row {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.socialLink {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.75rem 0;
+  font-size: 0.95rem;
+  color: #f0ede8;
+  text-decoration: none;
+  letter-spacing: 0.05em;
+  transition: opacity 0.2s;
+}
+
+.socialLink:hover {
+  opacity: 0.6;
+}
+
+.arrow {
+  font-size: 1.1rem;
+  opacity: 0.5;
+}
+
+@media screen and (max-width: 768px) {
+  .section {
+    padding: 3.5rem 1.25rem;
+  }
+
+  .email {
+    font-size: clamp(1.5rem, 7vw, 2.2rem);
+    margin-bottom: 3rem;
+  }
+}

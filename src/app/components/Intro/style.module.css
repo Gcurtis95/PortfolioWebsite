@@ -1,0 +1,196 @@
+.homeHeader{
+    position: sticky;
+    top: 0;
+    z-index: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    /* margin-left: 1.25%; */
+    margin-bottom: 0%;
+    font-family: var(--font-roboto), sans-serif;
+}
+
+
+
+
+
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+.intro h3{
+    display: flex;
+    top: 40rem;
+    left: 8rem;
+    position: absolute;
+    color: #f0ede8;
+    font-size: 3rem;
+    z-index: 2;
+    pointer-events: none;
+
+}
+
+.intro h4{
+    color: #f0ede8;
+    font-size: 3rem;
+    z-index: 2;
+    position: absolute;
+    top: 42rem;
+    left: 12rem;
+    max-height: 3rem;
+
+    text-align: right;
+    pointer-events: none;
+} 
+
+
+
+.homeHeader canvas {
+    position: absolute !important;
+    /* top: 5rem; */
+    width: 100% !important;
+    height: 100% !important;
+    z-index: 0;
+    align-items: center; 
+    /* border-radius: 20px; */
+    margin-bottom: 0%;
+
+  }
+
+  .topLine {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #f0ede8;
+    z-index: 10; /* higher than canvas */
+  }
+
+  .headerTop h1{
+    color: #f0ede8;
+    font-size: 2rem;
+    z-index: 2;
+    position: absolute;
+    top: 0.5rem;
+    right:20rem;
+    transform: translateY(-50%);
+    text-align: right;
+    pointer-events: none;
+
+  }
+
+
+  .clock {
+
+    color: #f0ede8;
+    font-size: 2rem;
+    z-index: 2;
+    position: absolute;
+    top: 1.8rem;
+    right:5rem;
+    transform: translateY(-50%);
+    text-align: right;
+    pointer-events: none;
+
+
+  }
+
+
+
+  .intro h5 {
+    font-size: 1.5rem;
+    color: #0A0A0A;
+    pointer-events: none;
+    top: 100rem;
+  }
+
+
+
+
+
+  @media screen and (max-width: 768px) {
+    .homeHeader {
+      position: relative;
+      width: 100%;
+      /* margin-left: 0; */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+
+
+    .homeHeader canvas {
+      top: 2rem;
+      height: 100% !important;
+      width: 100% !important;
+    }
+  }
+
+  @media screen and (max-height: 500px) and (orientation: landscape) {
+    .name {
+      flex-direction: row;
+      height: auto;
+      padding-top: 1rem;
+    }
+
+    .name h1 {
+      font-size: 3rem;
+      width: 50%;
+    }
+
+    .name h2 {
+      font-size: 3rem;
+      width: 50%;
+      margin-top: 2rem;
+      text-align: right;
+    }
+
+    .role {
+      height: auto;
+      margin-top: 0.5rem;
+    }
+
+    .role h3 {
+      font-size: 1.2rem;
+      margin-left: 1rem;
+    }
+
+    .role h4 {
+      font-size: 1.2rem;
+      margin-top: 0;
+    }
+
+    .bottomline {
+      position: absolute;
+      bottom: 1rem;
+      left: 0;
+    }
+
+    .bottomline h5 {
+      margin-left: 1.5rem;
+      margin-top: 0;
+      font-size: 0.9rem;
+    }
+
+    .homeHeader canvas {
+      top: 2rem;
+      height: 90% !important;
+    }
+  }

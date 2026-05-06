@@ -1,0 +1,208 @@
+.page {
+  background: #f0ede8;
+  color: #0a0a0a;
+  min-height: 100vh;
+  font-family: var(--font-roboto), sans-serif;
+}
+
+/* ── Main content area ─────────────────────────────────── */
+
+.main {
+  padding: 0 4%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+/* ── Title block ───────────────────────────────────────── */
+
+.titleSection {
+  padding: 7rem 0 3.5rem;
+}
+
+.index {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  color: #aaa;
+  text-transform: uppercase;
+  margin: 0 0 1.5rem;
+}
+
+.title {
+  font-size: clamp(3.5rem, 8vw, 9rem);
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  line-height: 0.92;
+  color: #0a0a0a;
+  margin: 0;
+}
+
+/* ── Dividers ──────────────────────────────────────────── */
+
+.rule {
+  border: none;
+  border-top: 1px solid #dedad5;
+  margin: 0;
+}
+
+/* ── Metadata ──────────────────────────────────────────── */
+
+.meta {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  padding: 2.5rem 0;
+}
+
+.metaItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.metaLabel {
+  font-size: 0.62rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #aaa;
+}
+
+.metaValue {
+  font-size: 0.9rem;
+  color: #0a0a0a;
+  line-height: 1.4;
+}
+
+/* ── Hero image ────────────────────────────────────────── */
+
+.hero {
+  margin: 4rem 0;
+}
+
+.heroInner {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #e5e0d9;
+}
+
+/* ── Body ──────────────────────────────────────────────── */
+
+.body {
+  padding: 4rem 0 2rem;
+  max-width: 780px;
+}
+
+.lead {
+  font-size: clamp(1.15rem, 2vw, 1.45rem);
+  line-height: 1.65;
+  letter-spacing: -0.01em;
+  color: #0a0a0a;
+  margin: 0 0 3rem;
+}
+
+.videoWrap {
+  position: relative;
+  width: 100%;
+  /* expand to full page width regardless of .body max-width */
+  margin-left: calc(-4vw);
+  width: calc(100% + 8vw);
+  aspect-ratio: 16 / 9;
+  margin-bottom: 3rem;
+}
+
+.video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.bodyText {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #555;
+  margin: 0 0 3rem;
+}
+
+.externalLink {
+  display: inline-block;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #0a0a0a;
+  text-decoration: none;
+  border-bottom: 1px solid #0a0a0a;
+  padding-bottom: 3px;
+  transition: opacity 0.2s;
+}
+
+.externalLink:hover {
+  opacity: 0.4;
+}
+
+/* ── Project navigation ────────────────────────────────── */
+
+.projectNav {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 3rem 0 6rem;
+}
+
+.navLink {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: #0a0a0a;
+  transition: opacity 0.2s;
+}
+
+.navLink:hover {
+  opacity: 0.4;
+}
+
+.navRight {
+  text-align: right;
+}
+
+.navLabel {
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #aaa;
+}
+
+.navTitle {
+  font-size: 1rem;
+  color: #0a0a0a;
+}
+
+/* ── Mobile ────────────────────────────────────────────── */
+
+@media screen and (max-width: 768px) {
+  .titleSection {
+    padding: 6rem 0 2.5rem;
+  }
+
+  .meta {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem 1rem;
+    padding: 2rem 0;
+  }
+
+  .body {
+    max-width: 100%;
+    padding: 2.5rem 0 1.5rem;
+  }
+
+  .videoWrap {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .projectNav {
+    padding: 2.5rem 0 4rem;
+  }
+}

@@ -1,0 +1,125 @@
+.section {
+  background-color: rgba(5, 5, 5, 0.6);
+  padding: 2.5rem 2.5%;
+  font-family: var(--font-roboto), sans-serif;
+  min-height: 100%;
+}
+
+/* ── Header ───────────────────────────────────────────── */
+
+.header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 4rem;
+}
+
+.label {
+  font-size: 0.7rem;
+  letter-spacing: 0.25em;
+  color: #f0ede8;
+  text-transform: uppercase;
+}
+
+.count {
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  color: #aaa;
+}
+
+/* ── Body (statement + image) ─────────────────────────── */
+
+.body {
+  display: grid;
+  grid-template-columns: 1fr 22%;
+  gap: 3rem;
+  align-items: start;
+  margin-bottom: 5rem;
+}
+
+.statement {
+  font-size: clamp(1.8rem, 3.6vw, 1.8rem);
+  font-weight: 10;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: #f0ede8e5;
+  margin: 0;
+}
+
+.imageWrap {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  opacity: 0.75;
+}
+
+/* ── Detail rows ──────────────────────────────────────── */
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.75rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.rowLabel {
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #aaa;
+}
+
+.rowValue {
+  font-size: 0.95rem;
+  color: #f0ede8;
+  letter-spacing: 0.01em;
+}
+
+.rowLink {
+  text-decoration: none;
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+}
+
+.rowLink:hover {
+  opacity: 1;
+}
+
+/* ── Mobile ───────────────────────────────────────────── */
+
+@media screen and (max-width: 768px) {
+  .section {
+    padding: 2rem 1.25rem;
+  }
+
+  .body {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .statement {
+    font-size: clamp(1rem, 4.5vw, 1.4rem);
+  }
+
+  .imageWrap {
+    aspect-ratio: 4 / 3;
+  }
+
+  .row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+    padding: 1.25rem 0;
+  }
+}

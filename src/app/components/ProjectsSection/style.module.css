@@ -1,0 +1,217 @@
+.section {
+  background-color: rgba(5, 5, 5, 0.6);
+  padding: 2.5rem 2.5%;
+  font-family: var(--font-roboto), sans-serif;
+  min-height: 100%;
+}
+
+/* ── Header ───────────────────────────────────────────── */
+
+.header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 3.5rem;
+}
+
+.label {
+  font-size: 0.7rem;
+  letter-spacing: 0.25em;
+  color: #f0ede8;
+  text-transform: uppercase;
+}
+
+.count {
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  color: #aaa;
+}
+
+/* ── List ─────────────────────────────────────────────── */
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.item {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* ── Row link ─────────────────────────────────────────── */
+
+.link {
+  position: relative;
+  display: grid;
+  grid-template-columns: 3rem 1fr auto auto auto;
+  align-items: center;
+  column-gap: 2rem;
+  padding: 2rem 0;
+  text-decoration: none;
+  color: #f0ede8;
+  transition: padding-left 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+}
+
+.item:hover .link {
+  padding-left: 1.25rem;
+}
+
+/* ── Cells ────────────────────────────────────────────── */
+
+.index {
+  font-size: 0.7rem;
+  color: #bbb;
+  font-variant-numeric: tabular-nums;
+  transition: color 0.3s;
+}
+
+.item:hover .index {
+  color: #888;
+}
+
+.title {
+  font-size: clamp(1.6rem, 3.2vw, 3rem);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  transition: letter-spacing 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.item:hover .title {
+  letter-spacing: 0.01em;
+}
+
+.category {
+  font-size: 0.68rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #777;
+  text-align: right;
+}
+
+.year {
+  font-size: 0.68rem;
+  color: #aaa;
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+
+.arrow {
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  transform: translate(-6px, 4px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.item:hover .arrow {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+/* ── Thumbnail (hover reveal) ─────────────────────────── */
+
+.thumb {
+  position: absolute;
+  right: 5rem;
+  top: 50%;
+  transform: translateY(-50%) scale(0.92);
+  width: 260px;
+  height: 170px;
+  border-radius: 6px;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 10;
+  transition:
+    opacity 0.4s ease,
+    transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.item:hover .thumb {
+  opacity: 1;
+  transform: translateY(-50%) scale(1);
+}
+
+.thumbPlaceholder {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* ── Mobile ───────────────────────────────────────────── */
+
+@media screen and (max-width: 768px) {
+  .section {
+    padding: 2rem 1.25rem;
+  }
+
+  .link {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.6rem;
+    padding: 1.5rem 0;
+    overflow: visible;
+    transition: none;
+  }
+
+  .item:hover .link {
+    padding-left: 0;
+  }
+
+  /* image always visible on mobile, sits above the text */
+  .thumb {
+    position: relative;
+    right: auto;
+    top: auto;
+    width: 100%;
+    height: 220px;
+    opacity: 1;
+    transform: none;
+    border-radius: 8px;
+    pointer-events: auto;
+    order: -1;
+    margin-bottom: 0.5rem;
+  }
+
+  .item:hover .thumb {
+    opacity: 1;
+    transform: none;
+  }
+
+  .index {
+    display: none;
+  }
+
+  .title {
+    font-size: 1.65rem;
+    white-space: normal;
+    letter-spacing: -0.01em;
+  }
+
+  .item:hover .title {
+    letter-spacing: -0.01em;
+  }
+
+  .category {
+    text-align: left;
+  }
+
+  .year {
+    text-align: left;
+  }
+
+  .arrow {
+    opacity: 1;
+    transform: none;
+    align-self: flex-end;
+    margin-top: -1rem;
+  }
+}
