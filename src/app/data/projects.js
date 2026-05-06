@@ -77,7 +77,7 @@ with generative AI models, bridging the gap between technical innovation and cre
     {
     slug: 'ancestral-(r)evocations-tate-modern',
     index: '01',
-    title: 'Ancestral (R)evocations',
+    title: 'Ancestral (R)evocations - Tate Modern',
     year: '2024',
     category: 'Installation · AI',
     role: 'Creative Developer',

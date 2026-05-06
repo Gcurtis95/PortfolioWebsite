@@ -31,7 +31,7 @@ const projects = [
   },
   {
     id: '04',
-    title: 'Ancestral (R)evocations',
+    title: 'Ancestral (R)evocations - Tate Modern',
     category: 'Installation · AI',
     year: '2024',
     href: '/projects/ancestral-(r)evocations-tate-modern',
