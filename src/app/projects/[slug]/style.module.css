@@ -1,5 +1,5 @@
 .page {
-  background: #f0ede8;
+  background: #ffffff;
   color: #0a0a0a;
   min-height: 100vh;
   font-family: var(--font-roboto), sans-serif;
@@ -40,7 +40,7 @@
 
 .rule {
   border: none;
-  border-top: 1px solid #dedad5;
+  border-top: 1px solid #e0e0e0;
   margin: 0;
 }
 
@@ -83,7 +83,7 @@
   width: 100%;
   aspect-ratio: 16 / 9;
   overflow: hidden;
-  background: #e5e0d9;
+  background: #f0f0f0;
 }
 
 /* ── Body ──────────────────────────────────────────────── */

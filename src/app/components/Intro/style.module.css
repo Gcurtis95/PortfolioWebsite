@@ -38,7 +38,7 @@
     top: 40rem;
     left: 8rem;
     position: absolute;
-    color: #f0ede8;
+    color: #ffffff;
     font-size: 3rem;
     z-index: 2;
     pointer-events: none;
@@ -46,7 +46,7 @@
 }
 
 .intro h4{
-    color: #f0ede8;
+    color: #ffffff;
     font-size: 3rem;
     z-index: 2;
     position: absolute;
@@ -78,12 +78,12 @@
     left: 0;
     width: 100%;
     height: 2px;
-    background-color: #f0ede8;
+    background-color: #ffffff;
     z-index: 10; /* higher than canvas */
   }
 
   .headerTop h1{
-    color: #f0ede8;
+    color: #ffffff;
     font-size: 2rem;
     z-index: 2;
     position: absolute;
@@ -98,7 +98,7 @@
 
   .clock {
 
-    color: #f0ede8;
+    color: #ffffff;
     font-size: 2rem;
     z-index: 2;
     position: absolute;
