@@ -42,3 +42,8 @@ next-env.d.ts
 
 
 CLAUDE.md*
+/.claude
+/.cursor
+/.impeccable
+DESIGN.md*
+PRODUCT.Md*

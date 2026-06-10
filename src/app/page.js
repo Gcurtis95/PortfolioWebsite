@@ -10,14 +10,15 @@ import Footer from "./components/Footer";
 import ProjectsSection from "./components/ProjectsSection";
 import About from "./components/About";
 import AudioVisual from "./components/AudioVisual";
+import HeroIdentity from "./components/HeroIdentity";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
-  const [activeSection, setActiveSection] = useState('work');
+  const [activeSection, setActiveSection] = useState('home');
 
   useEffect(() => {
     const hash = window.location.hash.slice(1);
-    if (['work', 'about', 'music'].includes(hash)) {
+    if (['home', 'work', 'about', 'music'].includes(hash)) {
       setActiveSection(hash);
     }
   }, []);
@@ -40,6 +41,7 @@ export default function Home() {
 
         <div className={styles.sectionOverlay}>
           <AnimatePresence mode="wait">
+            {activeSection === 'home'  && <HeroIdentity    key="home"  onNavigate={setActiveSection} />}
             {activeSection === 'work'  && <ProjectsSection key="work" />}
             {activeSection === 'about' && <About           key="about" />}
             {activeSection === 'music' && <AudioVisual     key="music" />}

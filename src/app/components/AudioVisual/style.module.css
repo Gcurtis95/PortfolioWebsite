@@ -1,68 +1,58 @@
 .container {
-    display: flex; 
-    height: 80vh;
-    width: 100vw;
-    padding-top: 20rem;
-    /* padding: 1rem; */
-  }
-  
-  .imageWrapper {
   display: flex;
-  flex-direction: column; /* stack AV and mute indicator vertically */
-  justify-content: center;
-  align-items: center;
+  flex: 1 0 auto;
   width: 100%;
-  margin-top: 5rem;
-  }
-  
-  .image {
-    display: flex;
-    align-items: center;
-    width: 80rem;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem 2rem;
+  font-family: "Articulat CF", sans-serif;
+  backdrop-filter: blur(2px);
+  background-color: rgba(0, 4, 4, 0.82);
+}
 
-  }
-
-  .muteIndicator {
-    margin-top : 1rem;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    display: flex; 
-
-
-
-    background: rgba(0,0,0,0.6);    
-    color: rgba(204, 204, 204, 0.4);
-    padding: 5px 10px;
-    font-size: 0.9rem;
-    border-radius: 4px;
-    pointer-events: none;
-  }
-  
-  /* Mobile adjustments */
-@media (max-width: 768px) {
-    .container {
-      padding-top: 2rem;
-      justify-content: center;
-      align-items: center;
-    }
-  
-    .muteIndicator {
-      font-size: 0.9rem;
-      margin-top: 0.5rem;
-    }
-    .imageWrapper {
-  margin-top: 2rem;
+.imageWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  max-width: 80rem;
+  cursor: pointer;
 }
 
 .image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: border-color 0.3s ease;
+}
 
-  max-width: 95%;
-  height: 95%;
+.imageWrapper:hover .image {
+  border-color: rgba(255, 255, 255, 0.6);
 }
 
 .muteIndicator {
-  font-size: 0.8rem;
-  margin-top: 0.5rem;
+  font-family: "Articulat CF", sans-serif;
+  font-size: 9pt;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.35);
+  pointer-events: none;
+  transition: color 0.3s ease;
 }
+
+.imageWrapper:hover .muteIndicator {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 2rem 1.25rem;
+    align-items: flex-start;
   }
+
+  .imageWrapper {
+    gap: 0.75rem;
+  }
+}

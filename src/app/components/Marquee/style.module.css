@@ -1,0 +1,51 @@
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  border-top: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
+  background: #000;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.track {
+  display: flex;
+  white-space: nowrap;
+  animation: marqueeScroll 180s linear infinite;
+  will-change: transform;
+}
+
+.reverse .track {
+  animation-direction: reverse;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .track {
+    animation: none;
+  }
+}
+
+.content {
+  font-family: "Articulat CF", sans-serif;
+  font-size: 9pt;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #ffffff;
+  flex-shrink: 0;
+}
+
+.sep {
+  font-family: "Articulat CF", sans-serif;
+  font-size: 9pt;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.3);
+  flex-shrink: 0;
+  padding: 0 0.1em;
+}
+
+@keyframes marqueeScroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}

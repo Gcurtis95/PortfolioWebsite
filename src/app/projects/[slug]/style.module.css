@@ -1,50 +1,76 @@
 .page {
-  background: #ffffff;
-  color: #0a0a0a;
+  background: #000;
+  color: #ffffff;
   min-height: 100vh;
-  font-family: var(--font-roboto), sans-serif;
+  font-family: "Articulat CF", sans-serif;
 }
 
-/* ── Main content area ─────────────────────────────────── */
+/* ── Main content area ─────────────────────────────────────── */
 
 .main {
-  padding: 0 4%;
+  padding: 0 2rem;
   max-width: 1440px;
   margin: 0 auto;
 }
 
-/* ── Title block ───────────────────────────────────────── */
+/* ── Title block ───────────────────────────────────────────── */
 
 .titleSection {
   padding: 7rem 0 3.5rem;
 }
 
-.index {
-  font-size: 0.7rem;
-  letter-spacing: 0.2em;
-  color: #aaa;
+.back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 9pt;
+  letter-spacing: 0.02em;
   text-transform: uppercase;
-  margin: 0 0 1.5rem;
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  margin: 0 0 2.5rem;
+  transition: color 0.25s ease;
+  position: relative;
+}
+
+.back:hover {
+  color: #ffffff;
+}
+
+.index {
+  font-size: 9pt;
+  letter-spacing: 0.02em;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  margin: 0 0 1rem;
 }
 
 .title {
-  font-size: clamp(3.5rem, 8vw, 9rem);
-  font-weight: 400;
-  letter-spacing: -0.03em;
-  line-height: 0.92;
-  color: #0a0a0a;
+  font-size: clamp(1.5rem, 4vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  line-height: 1;
+  color: #ffffff;
   margin: 0;
+  text-wrap: balance;
 }
 
-/* ── Dividers ──────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .back {
+    transition: none;
+  }
+}
+
+/* ── Dividers ──────────────────────────────────────────────── */
 
 .rule {
   border: none;
-  border-top: 1px solid #e0e0e0;
-  margin: 0;
+  border-top: 1px solid #ffffff;
+  margin-left: -2rem;
+  margin-right: -2rem;
 }
 
-/* ── Metadata ──────────────────────────────────────────── */
+/* ── Metadata ──────────────────────────────────────────────── */
 
 .meta {
   display: grid;
@@ -60,19 +86,19 @@
 }
 
 .metaLabel {
-  font-size: 0.62rem;
-  letter-spacing: 0.2em;
+  font-size: 9pt;
+  letter-spacing: 0.02em;
   text-transform: uppercase;
-  color: #aaa;
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .metaValue {
-  font-size: 0.9rem;
-  color: #0a0a0a;
+  font-size: 9pt;
+  color: #ffffff;
   line-height: 1.4;
 }
 
-/* ── Hero image ────────────────────────────────────────── */
+/* ── Hero image ────────────────────────────────────────────── */
 
 .hero {
   margin: 4rem 0;
@@ -83,10 +109,16 @@
   width: 100%;
   aspect-ratio: 16 / 9;
   overflow: hidden;
-  background: #f0f0f0;
+  background: rgba(0, 212, 200, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  transition: border-color 0.3s ease;
 }
 
-/* ── Body ──────────────────────────────────────────────── */
+.heroInner:hover {
+  border-color: rgba(255, 255, 255, 0.8);
+}
+
+/* ── Body ──────────────────────────────────────────────────── */
 
 .body {
   padding: 4rem 0 2rem;
@@ -94,19 +126,17 @@
 }
 
 .lead {
-  font-size: clamp(1.15rem, 2vw, 1.45rem);
+  font-size: 9pt;
   line-height: 1.65;
-  letter-spacing: -0.01em;
-  color: #0a0a0a;
+  letter-spacing: 0.02em;
+  color: #ffffff;
   margin: 0 0 3rem;
 }
 
 .videoWrap {
   position: relative;
-  width: 100%;
-  /* expand to full page width regardless of .body max-width */
-  margin-left: calc(-4vw);
-  width: calc(100% + 8vw);
+  margin-left: -2rem;
+  width: calc(100% + 4rem);
   aspect-ratio: 16 / 9;
   margin-bottom: 3rem;
 }
@@ -119,29 +149,30 @@
 }
 
 .bodyText {
-  font-size: 1.05rem;
+  font-size: 9pt;
   line-height: 1.8;
-  color: #555;
+  color: rgba(255, 255, 255, 0.75);
   margin: 0 0 3rem;
+  text-wrap: pretty;
 }
 
 .externalLink {
   display: inline-block;
-  font-size: 0.8rem;
-  letter-spacing: 0.08em;
+  font-size: 9pt;
+  letter-spacing: 0.02em;
   text-transform: uppercase;
-  color: #0a0a0a;
+  color: #ffffff;
   text-decoration: none;
-  border-bottom: 1px solid #0a0a0a;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
   padding-bottom: 3px;
-  transition: opacity 0.2s;
+  transition: color 0.25s ease, border-color 0.25s ease;
 }
 
 .externalLink:hover {
-  opacity: 0.4;
+  opacity: 0.6;
 }
 
-/* ── Project navigation ────────────────────────────────── */
+/* ── Project navigation ────────────────────────────────────── */
 
 .projectNav {
   display: flex;
@@ -155,12 +186,13 @@
   flex-direction: column;
   gap: 0.5rem;
   text-decoration: none;
-  color: #0a0a0a;
-  transition: opacity 0.2s;
+  color: #ffffff;
+  position: relative;
+  transition: opacity 0.25s ease;
 }
 
 .navLink:hover {
-  opacity: 0.4;
+  opacity: 0.7;
 }
 
 .navRight {
@@ -168,22 +200,26 @@
 }
 
 .navLabel {
-  font-size: 0.65rem;
-  letter-spacing: 0.2em;
+  font-size: 9pt;
+  letter-spacing: 0.02em;
   text-transform: uppercase;
-  color: #aaa;
+  color: #ffffff;
 }
 
 .navTitle {
-  font-size: 1rem;
-  color: #0a0a0a;
+  font-size: 9pt;
+  color: #ffffff;
 }
 
-/* ── Mobile ────────────────────────────────────────────── */
+/* ── Mobile ────────────────────────────────────────────────── */
 
 @media screen and (max-width: 768px) {
   .titleSection {
     padding: 6rem 0 2.5rem;
+  }
+
+  .title {
+    font-size: clamp(1.5rem, 8vw, 2.5rem);
   }
 
   .meta {

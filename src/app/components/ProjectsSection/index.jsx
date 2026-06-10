@@ -2,6 +2,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { FiArrowUpRight } from 'react-icons/fi';
+import { motion, useReducedMotion } from 'framer-motion';
 import styles from './style.module.css';
 
 const projects = [
@@ -49,8 +50,28 @@ const projects = [
 ];
 
 export default function ProjectsSection() {
+  const reducedMotion = useReducedMotion();
+
+  const variants = reducedMotion
+    ? {
+        initial: { opacity: 0 },
+        animate: { opacity: 1, transition: { duration: 0.2 } },
+        exit:    { opacity: 0, transition: { duration: 0.15 } },
+      }
+    : {
+        initial: { opacity: 0, y: 14 },
+        animate: { opacity: 1, y: 0, transition: { duration: 0.4, ease: [0.16, 1, 0.3, 1] } },
+        exit:    { opacity: 0, y: -8, transition: { duration: 0.22, ease: [0.4, 0, 1, 1] } },
+      };
+
   return (
-    <section className={styles.section}>
+    <motion.section
+      className={styles.section}
+      variants={variants}
+      initial="initial"
+      animate="animate"
+      exit="exit"
+    >
       <div className={styles.header}>
         <span className={styles.label}>SELECTED WORK</span>
         <span className={styles.count}>({String(projects.length).padStart(2, '0')})</span>
@@ -83,6 +104,6 @@ export default function ProjectsSection() {
           </li>
         ))}
       </ul>
-    </section>
+    </motion.section>
   );
 }

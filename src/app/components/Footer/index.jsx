@@ -18,7 +18,9 @@ export default function Footer() {
           </li>
         ))}
       </ul>
-      <span className={styles.copy}>© 2026 Garin Curtis</span>
+      <span className={styles.copy}>
+        © 2026 Garin Curtis
+      </span>
     </footer>
   );
 }

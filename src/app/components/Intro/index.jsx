@@ -13,6 +13,8 @@ export default function Intro({ onLoaded }) {
     const introImage = useRef(null);
 
     useLayoutEffect( () => {
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
         gsap.registerPlugin(ScrollTrigger);
 
         const timeline = gsap.timeline({
@@ -40,34 +42,7 @@ export default function Intro({ onLoaded }) {
 
                 <div className={styles.container}>
 
-                    {/* <div className={styles.name}>
-                        <h1>GARIN </h1>
-                        <h2>CURTIS</h2>
 
-
-                    </div> */}
-
-                    {/* <div className={styles.role}>
-
-                        <h3>CREATIVE </h3>
-                        <h4>DEVELOPER</h4>
-
-                    </div> */}
-
-                    {/* <div className={styles.bottomline}>
-
-                        <IconContext.Provider value={{ style: { verticalAlign: 'middle' } }}>
-
-                        <h5> Scroll down <FaArrowDown /></h5>
-
-                        </IconContext.Provider>
-
-                        
-
-
-
-
-                    </div> */}
                     
 
 

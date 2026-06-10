@@ -4,6 +4,7 @@ import Image from 'next/image';
 import projects from '../../data/projects';
 import Navbar from '../../components/Navbar';
 import styles from './style.module.css';
+import { FiArrowLeft } from 'react-icons/fi';
 
 export function generateStaticParams() {
   return projects.map((p) => ({ slug: p.slug }));
@@ -26,6 +27,9 @@ export default async function ProjectPage({ params }) {
 
         {/* ── Title block ────────────────────────────── */}
         <section className={styles.titleSection}>
+          <Link href="/#work" className={styles.back}>
+            <FiArrowLeft /> All work
+          </Link>
           <p className={styles.index}>{project.index} / {String(projects.length).padStart(2, '0')}</p>
           <h1 className={styles.title}>{project.title}</h1>
         </section>

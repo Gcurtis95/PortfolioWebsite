@@ -1,38 +1,77 @@
+@font-face {
+  font-family: "Articulat CF";
+  src: url("/fonts/ArticulatCF-Normal.woff2") format("woff2"),
+       url("/fonts/ArticulatCF-Normal.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Articulat CF";
+  src: url("/fonts/ArticulatCF-Bold.woff2") format("woff2"),
+       url("/fonts/ArticulatCF-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Articulat CF";
+  src: url("/fonts/ArticulatCF-ExtraBold.woff2") format("woff2"),
+       url("/fonts/ArticulatCF-ExtraBold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
 html, body {
   margin: 0;
-  background-color: #ffffff;
-  font-family: var(--font-roboto), sans-serif;
-  /* cursor: wait; */
-  /* overflow-x: hidden; */
+  background-color: #000;
+  color: #ffffff;
+  font-family: "Articulat CF", sans-serif;
 }
 
 :root {
-  font-family: var(--font-roboto), sans-serif;
+  font-family: "Articulat CF", sans-serif;
+  --color-teal: #00d4c8;
+  --color-teal-dim: rgba(0, 212, 200, 0.5);
+  --color-teal-faint: rgba(0, 212, 200, 0.15);
+  --color-bg: #000;
+  --color-text: #ffffff;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+
+::selection {
+  background: #ffffff;
+  color: #000;
+}
 
 ::view-transition-old(root),
 ::view-transition-new(root) {
-  animation: none ;
-
+  animation: none;
 }
 
 ::view-transition-group(root) {
-  z-index: auto ;
-
+  z-index: auto;
 }
-::view-transition-image-pair(root){
+
+::view-transition-image-pair(root) {
   isolation: isolate;
   will-change: transform, opacity, clip-path;
   z-index: 1;
 }
 
-::view-transition-new(root){
+::view-transition-new(root) {
   z-index: 10000;
-  animation: none ;
+  animation: none;
 }
 
-::view-transition-old(root){
+::view-transition-old(root) {
   z-index: 1;
-  animation: none ;
+  animation: none;
 }

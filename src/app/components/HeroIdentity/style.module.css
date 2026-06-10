@@ -1,0 +1,108 @@
+.section {
+  flex: 1 1 0%;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  pointer-events: none;
+}
+
+/* ── Identity block ────────────────────────────────────────── */
+
+.identity {
+  padding: 0 2rem 1.5rem;
+  border-top: 1px solid #ffffff;
+}
+
+.name {
+  font-family: "Articulat CF", sans-serif;
+  font-size: clamp(2.5rem, 7vw, 5.5rem);
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: #ffffff;
+  line-height: 0.92;
+  margin: 0 0 0.75rem;
+  text-wrap: balance;
+}
+
+.role {
+  font-family: "Articulat CF", sans-serif;
+  font-size: 9pt;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0;
+}
+
+/* ── Navigation row ────────────────────────────────────────── */
+
+.nav {
+  display: flex;
+  gap: 0;
+  border-top: 1px solid #ffffff;
+  pointer-events: auto;
+}
+
+.navItem {
+  flex: 1;
+  background: none;
+  border: none;
+  border-right: 1px solid #ffffff;
+  font-family: "Articulat CF", sans-serif;
+  font-size: 9pt;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 1.25rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.4rem;
+  text-align: left;
+  transition: background 0.3s ease;
+}
+
+.navItem:last-child {
+  border-right: none;
+}
+
+.navItem:hover {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.navLabel {
+  font-weight: 700;
+}
+
+.navMeta {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 9pt;
+}
+
+/* ── Mobile ────────────────────────────────────────────────── */
+
+@media screen and (max-width: 768px) {
+  .name {
+    font-size: clamp(2rem, 10vw, 3rem);
+  }
+
+  .identity {
+    padding: 0 1.25rem 1.25rem;
+  }
+
+  .navItem {
+    padding: 1rem 1.25rem;
+  }
+}
+
+/* ── Reduced motion ────────────────────────────────────────── */
+
+@media (prefers-reduced-motion: reduce) {
+  .navItem {
+    transition: none;
+  }
+}

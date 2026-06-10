@@ -5,9 +5,18 @@
     width: 100vw;
     height: 100vh;
     overflow: hidden;
-    /* margin-left: 1.25%; */
     margin-bottom: 0%;
-    font-family: var(--font-roboto), sans-serif;
+    font-family: "Articulat CF", sans-serif;
+    background: #000;
+}
+
+.homeHeader::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: 1;
+    pointer-events: none;
 }
 
 

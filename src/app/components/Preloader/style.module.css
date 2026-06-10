@@ -14,7 +14,7 @@
 
     z-index: 99;
 
-    background-color: #ffffff;
+    background-color: #000;
 
     svg{
 
@@ -24,11 +24,11 @@
 
         width: 100%;
 
-        height: calc(100% + 300px); 
+        height: calc(100% + 300px);
 
         path{
 
-            fill: #000000;
+            fill: #000;
 
         }
 
@@ -38,7 +38,10 @@
 
         display: flex;
 
-        color: rgb(0, 0, 0);
+        color: #ffffff;
+        font-family: "Articulat CF", sans-serif;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
 
         font-size: 20px;
 
@@ -56,7 +59,7 @@
 
             height: 10px;
 
-            background-color: white;
+            background-color: #ffffff;
 
             border-radius: 50%;
 

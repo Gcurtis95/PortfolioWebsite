@@ -1,125 +1,247 @@
 .section {
-  background-color: rgba(5, 5, 5, 0.6);
-  padding: 2.5rem 2.5%;
-  font-family: var(--font-roboto), sans-serif;
-  min-height: 100%;
+  background-color: rgba(0, 0, 0, 0.88);
+  padding: 2.5rem 2rem;
+  font-family: "Articulat CF", sans-serif;
+  flex: 1 0 auto;
+  backdrop-filter: blur(4px);
+  width: 50%;
 }
 
-/* ── Header ───────────────────────────────────────────── */
+/* ── Header ─────────────────────────────────────────────────── */
 
 .header {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
-  margin-bottom: 4rem;
+  padding-bottom: 1.5rem;
+  margin-left: -2rem;
+  margin-right: -2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  border-bottom: 1px solid #ffffff;
+  margin-bottom: 2.5rem;
 }
 
 .label {
-  font-size: 0.7rem;
-  letter-spacing: 0.25em;
-  color: #f0ede8;
+  font-size: 9pt;
+  letter-spacing: 0.02em;
+  color: #ffffff;
   text-transform: uppercase;
 }
 
-.count {
-  font-size: 0.7rem;
-  letter-spacing: 0.1em;
-  color: #aaa;
+.index {
+  font-size: 9pt;
+  letter-spacing: 0.02em;
+  color: #ffffff;
 }
 
-/* ── Body (statement + image) ─────────────────────────── */
+/* ── Statement ──────────────────────────────────────────────── */
 
-.body {
-  display: grid;
-  grid-template-columns: 1fr 22%;
-  gap: 3rem;
-  align-items: start;
-  margin-bottom: 5rem;
+.statementWrap {
+  margin-bottom: 2.5rem;
 }
 
 .statement {
-  font-size: clamp(1.8rem, 3.6vw, 1.8rem);
-  font-weight: 10;
+  font-size: 9pt;
+  font-weight: 700;
   line-height: 1.2;
-  letter-spacing: -0.02em;
-  color: #f0ede8e5;
+  letter-spacing: 0.02em;
+  color: #ffffff;
   margin: 0;
+  max-width: 900px;
 }
 
-.imageWrap {
-  position: relative;
-  aspect-ratio: 3 / 4;
-  overflow: hidden;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 8px;
-  opacity: 0.75;
+/* ── Full-bleed divider ─────────────────────────────────────── */
+
+.rule {
+  border: none;
+  border-top: 1px solid #ffffff;
+  margin-left: -2rem;
+  margin-right: -2rem;
 }
 
-/* ── Detail rows ──────────────────────────────────────── */
+/* ── 4-column detail grid ───────────────────────────────────── */
 
-.list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
 
-.row {
+.cell {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  padding: 1.75rem 1.5rem;
+  border-right: 1px solid #ffffff;
+}
+
+
+.cell:last-child {
+  border-right: none;
+  padding-right: 0;
+}
+
+.cellLabel {
+  font-size: 9pt;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cell:hover .cellLabel {
+  transform: translateX(0.5rem);
+}
+
+.cellValue {
+  font-size: 9pt;
+  color: #ffffff;
+  line-height: 1.4;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cell:hover .cellValue {
+  transform: translateX(0.5rem);
+}
+
+/* ── Email row ──────────────────────────────────────────────── */
+
+.emailRow {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.75rem 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 1.5rem 0;
 }
 
-.rowLabel {
-  font-size: 0.68rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: #aaa;
-}
-
-.rowValue {
-  font-size: 0.95rem;
-  color: #f0ede8;
-  letter-spacing: 0.01em;
-}
-
-.rowLink {
+.emailLink {
+  font-size: 9pt;
+  color: #ffffff;
   text-decoration: none;
-  opacity: 0.8;
-  transition: opacity 0.2s ease;
+  letter-spacing: 0.02em;
+  position: relative;
+  transition: color 0.25s ease;
 }
 
-.rowLink:hover {
-  opacity: 1;
+.emailLink::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #ffffff;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* ── Mobile ───────────────────────────────────────────── */
+.emailLink:hover {
+  opacity: 0.6;
+}
+
+.emailLink:hover::after {
+  transform: scaleX(1);
+}
+
+/* ── Secondary bio ──────────────────────────────────────────── */
+
+.bio {
+  padding: 2rem 0 0.5rem;
+  max-width: 720px;
+}
+
+.bio p {
+  font-size: 9pt;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+  letter-spacing: 0.02em;
+}
+
+/* ── Portrait ───────────────────────────────────────────────── */
+
+.portrait {
+  margin-bottom: 1.5rem;
+}
+
+.portraitImg {
+  display: block;
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* ── Mobile ─────────────────────────────────────────────────── */
 
 @media screen and (max-width: 768px) {
   .section {
     padding: 2rem 1.25rem;
+    width: 100%;
   }
 
-  .body {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    margin-bottom: 3rem;
+  .header {
+    margin-left: -1.25rem;
+    margin-right: -1.25rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .rule {
+    margin-left: -1.25rem;
+    margin-right: -1.25rem;
   }
 
   .statement {
-    font-size: clamp(1rem, 4.5vw, 1.4rem);
+    font-size: 9pt;
   }
 
-  .imageWrap {
-    aspect-ratio: 4 / 3;
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  .row {
+  .cell {
+    border-right: none;
+    border-bottom: 1px solid #ffffff;
+    padding: 1.25rem 0;
+  }
+
+  .cell:hover {
+    padding-left: 0;
+  }
+
+  .cell:hover .cellLabel,
+  .cell:hover .cellValue {
+    transform: none;
+  }
+
+  .cell:nth-child(odd) {
+    border-right: 1px solid #ffffff;
+    padding-right: 1rem;
+  }
+
+  .cell:nth-last-child(-n+2) {
+    border-bottom: none;
+  }
+
+  .emailRow {
     flex-direction: column;
     align-items: flex-start;
     gap: 0.4rem;
     padding: 1.25rem 0;
+  }
+
+  .emailLink {
+    font-size: 9pt;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cellLabel,
+  .cellValue {
+    transition: none;
+  }
+
+  .emailLink::after {
+    transition: none;
   }
 }
