@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import projects from '../../data/projects';
 import Navbar from '../../components/Navbar';
+import ImageGallery from '../../components/ImageGallery';
 import styles from './style.module.css';
 import { FiArrowLeft } from 'react-icons/fi';
 
@@ -58,8 +59,10 @@ export default async function ProjectPage({ params }) {
 
         <hr className={styles.rule} />
 
-        {/* ── Hero image ────────────────────────────── */}
-        {project.image && (
+        {/* ── Hero image / gallery ──────────────────── */}
+        {project.images ? (
+          <ImageGallery images={project.images} title={project.title} />
+        ) : project.image && (
           <section className={styles.hero}>
             <div className={styles.heroInner}>
               <Image

@@ -110,12 +110,29 @@
   aspect-ratio: 16 / 9;
   overflow: hidden;
   background: rgba(0, 212, 200, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  transition: border-color 0.3s ease;
 }
 
-.heroInner:hover {
-  border-color: rgba(255, 255, 255, 0.8);
+/* ── Image gallery ─────────────────────────────────────────── */
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 4rem 0;
+}
+
+.galleryItem {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+@media screen and (max-width: 768px) {
+  .gallery {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
 }
 
 /* ── Body ──────────────────────────────────────────────────── */

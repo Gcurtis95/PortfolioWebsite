@@ -6,8 +6,16 @@ import { motion, useReducedMotion } from 'framer-motion';
 import styles from './style.module.css';
 
 const projects = [
-    {
+  {
     id: '01',
+    title: 'Global Climate Projection App',
+    category: 'Web Application · AI',
+    year: '2025',
+    href: '/projects/climate-projection-app',
+    image: '/images/ClimateHomepage.png',
+  },
+    {
+    id: '02',
     title: 'A + E labs - Lilith AI',
     category: 'Installation · AI',
     year: '2026',
@@ -15,7 +23,7 @@ const projects = [
     image: '/images/Lilith_AI.jpg',
   },
     {
-    id: '02',
+    id: '03',
     title: 'Installation at CVPR 2025 AI Art Gallery',
     category: 'Installation · AI',
     year: '2025',
@@ -23,7 +31,7 @@ const projects = [
     image: '/images/CVPR2025.jpg',
   },
     {
-    id: '03',
+    id: '04',
     title: 'Real-time Manipulation Tool for Stable Diffusion',
     category: 'AI Creative Tech',
     year: '2025',
@@ -31,7 +39,7 @@ const projects = [
     image: '/images/Layer1.png', // add image path
   },
   {
-    id: '04',
+    id: '05',
     title: 'Ancestral (R)evocations - Tate Modern',
     category: 'Installation · AI',
     year: '2024',
