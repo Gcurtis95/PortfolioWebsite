@@ -10,9 +10,15 @@ const projects = [
     description:
       "An end-to-end agentic content pipeline built in n8n with a Next.js frontend. The system ingests a campaign brief and autonomously generates a complete multi-platform creative package which combines live trend data, LLM reasoning, and generative AI into a single orchestrated workflow.",
     body:
-      `The pipeline fetches real-time brand news via NewsAPI, feeds trend context alongside the brief into GPT-4o to generate a strategic creative brief, platform-specific copy for Instagram, Twitter and email, an image generation prompt, and a video concept. The image prompt is passed to Flux Schnell via the Replicate API, with an asynchronous polling loop handling inference latency before returning the completed asset. All outputs are logged to Google Sheets and returned to a clean frontend interface in a single response.
+      `The pipeline opens with a Brand Intelligence Agent powered by Claude opus, which uses web search to generate a comprehensive brand config — covering brand voice, content pillars, competitor landscape, banned themes, visual style, and a full trend analysis including emerging themes, cultural moments, audience sentiment, and content opportunities. This config becomes the shared intelligence layer that shapes every downstream decision.
 
-Key engineering patterns: Webhook-triggered orchestration · Structured LLM output parsing · Async API polling with conditional looping · Multi-source data merging · End-to-end pipeline from brief to creative asset`,
+Creative Generation Agent produces platform-specific copy for Instagram, Twitter/X, and email, alongside an image generation prompt and video concept, all strictly informed by the brand intelligence layer.
+
+A Creative Director Agent then critiques the first-pass output against the brand brief, rewrites each element to a higher standard, and produces an improved image prompt. This feeds into Flux 2 Pro via the Replicate API, with an asynchronous polling loop handling inference latency. The generated image is then passed back to Claude's vision capability for art direction critique and prompt refinement.
+
+All outputs brand config, trend analysis, copy variants, quality scores, image URL, and video concept are logged to Google Sheets as a structured campaign record and returned to a clean frontend interface in a single response.
+
+Architecture highlights: Three-agent Claude pipeline with distinct roles: Brand Strategist, Creative Writer, Creative Director · Async image generation with conditional polling loop · Brand safety guardrails derived dynamically from brand config · Structured JSON output parsing throughout with graceful error fallbacks · Dual-endpoint architecture separating fast brand intelligence response from full campaign delivery · Vision-enabled image critique closing the generative loop`,
     images: [
       '/images/n8n Worksflow.png',
       '/images/n8nFrontend.png',
