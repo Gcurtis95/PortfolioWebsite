@@ -1,9 +1,34 @@
 const projects = [
   {
+    slug: 'agentic-content-engine',
+    index: '01',
+    title: 'Agentic Content Engine Prototype',
+    year: '2026',
+    category: 'AI · Automation',
+    role: 'Creative AI Technologist',
+    tools: 'Next.js,  React, Tailwind, WebGL, n8n, GPT-4o, Replicate (Flux Schnell), NewsAPI, Google Sheets API, Railway',
+    description:
+      "An end-to-end agentic content pipeline built in n8n with a Next.js frontend. The system ingests a campaign brief and autonomously generates a complete multi-platform creative package which combines live trend data, LLM reasoning, and generative AI into a single orchestrated workflow.",
+    body:
+      `The pipeline fetches real-time brand news via NewsAPI, feeds trend context alongside the brief into GPT-4o to generate a strategic creative brief, platform-specific copy for Instagram, Twitter and email, an image generation prompt, and a video concept. The image prompt is passed to Flux Schnell via the Replicate API, with an asynchronous polling loop handling inference latency before returning the completed asset. All outputs are logged to Google Sheets and returned to a clean frontend interface in a single response.
+
+Key engineering patterns: Webhook-triggered orchestration · Structured LLM output parsing · Async API polling with conditional looping · Multi-source data merging · End-to-end pipeline from brief to creative asset`,
+    images: [
+      '/images/n8n Worksflow.png',
+      '/images/n8nFrontend.png',
+      '/images/n8nResults1.png',
+      '/images/n8nResults2.png',
+    ],
+    image: '/images/n8nFrontend.png',
+    video: null,
+    link: null,
+    linkLabel: null,
+  },
+  {
     slug: 'climate-projection-app',
     index: '01',
     title: 'Global Climate Projection App',
-    year: '2025',
+    year: '2026',
     category: 'Web Application · AI',
     role: 'Full-Stack Creative AI Technologist',
     tools: 'Next.js, Three.js, TypeScript, Python, FastAPI, LangChain, OpenAI API, Google Earth Engine, ChromaDB, GCP, GLSL',

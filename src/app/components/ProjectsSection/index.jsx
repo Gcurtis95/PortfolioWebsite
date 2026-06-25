@@ -8,38 +8,46 @@ import styles from './style.module.css';
 const projects = [
   {
     id: '01',
+    title: 'Agentic Content Engine Prototype',
+    category: 'AI · Automation',
+    year: '2026',
+    href: '/projects/agentic-content-engine',
+    image: '/images/n8nFrontend.png',
+  },
+  {
+    id: '02',
     title: 'Global Climate Projection App',
     category: 'Web Application · AI',
-    year: '2025',
+    year: '2026',
     href: '/projects/climate-projection-app',
     image: '/images/ClimateHomepage.png',
   },
-    {
-    id: '02',
+  {
+    id: '03',
     title: 'A + E labs - Lilith AI',
     category: 'Installation · AI',
     year: '2026',
     href: '/projects/ae-labs-lilith-ai',
     image: '/images/Lilith_AI.jpg',
   },
-    {
-    id: '03',
+  {
+    id: '04',
     title: 'Installation at CVPR 2025 AI Art Gallery',
     category: 'Installation · AI',
     year: '2025',
     href: '/projects/cvpr-2025-installation',
     image: '/images/CVPR2025.jpg',
   },
-    {
-    id: '04',
+  {
+    id: '05',
     title: 'Real-time Manipulation Tool for Stable Diffusion',
     category: 'AI Creative Tech',
     year: '2025',
     href: '/projects/ai-plugin',
-    image: '/images/Layer1.png', // add image path
+    image: '/images/Layer1.png',
   },
   {
-    id: '05',
+    id: '06',
     title: 'Ancestral (R)evocations - Tate Modern',
     category: 'Installation · AI',
     year: '2024',
